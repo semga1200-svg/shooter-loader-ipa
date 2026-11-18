@@ -1,0 +1,41 @@
+name: ShooterLoader
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "15.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+targets:
+  ShooterLoader:
+    type: application
+    platform: iOS
+    sources:
+      - ShooterLoader
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: Shooter Loader
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.shooterloader
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1"
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+schemes:
+  ShooterLoader:
+    build:
+      targets:
+        ShooterLoader: all
+    run:
+      config: Release
+    archive:
+      config: Release
